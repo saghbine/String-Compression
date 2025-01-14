@@ -21,7 +21,7 @@ int main()
     
     cout<<"\noutput\n------\n\tThe compressed string is: "<<String_Compression(str)<<".\n\n";
     
-    cout<<"solution\n--------\n\tAuxiliary space complexity: O(1); time complexity: O(n).\n\n";
+    cout<<"solution\n--------\n\tAuxiliary space complexity: O(n); time complexity: O(n).\n\n";
     
     return 0;
 }
@@ -50,7 +50,7 @@ string String_Compression(const string &s) // s is input string
         compress+=s[i]+to_string(1); // add to compress with constant 1 as repeat
     
     if(!compress.empty() && compress.size() < s.size()) // if compress isn't empty and its size is less than s
-        return compress; // return compress
+        return compress; // compress is shortest
     
-    return s; // return s
+    return s; // s is shortest
 }
