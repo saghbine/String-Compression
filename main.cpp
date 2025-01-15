@@ -1,9 +1,9 @@
 //
 //  main.cpp
-//  String Compression
+//  CTCI 1.6 String Compression
 //
 //  Created by daniel saghbine on 12/17/24.
-//  CTCI 1.6 String Compression
+//
 
 #include <iostream>
 using namespace std;
@@ -12,14 +12,13 @@ string String_Compression(const string &s);
 
 int main()
 {
-    string str;
-    
     cout<<"problem\n-------\n\tImplement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the \"compressed\" string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a - z).\n\n";
     
     cout<<"input\n-----\n\tType: ";
+    string str;
     cin>>str;
     
-    cout<<"\noutput\n------\n\tThe compressed string is: "<<String_Compression(str)<<".\n\n";
+    cout<<"\noutput\n------\n\t\""<<String_Compression(str)<<"\"\n\n";
     
     cout<<"solution\n--------\n\tAuxiliary space complexity: O(n); time complexity: O(n).\n\n";
     
