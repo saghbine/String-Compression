@@ -45,11 +45,11 @@ string String_Compression(const string &s) // s is input string
         counter=0; // reset counter of select char
     }
     
-    if(i != 0 && s[i-1] != s[i]) // if s got checked and now checks last pair if last letter is unique
+    if(i == s.size()-1 && s[i-1] != s[i]) // if s got checked and now checks last pair if last letter is unique
         compress+=s[i]+to_string(1); // add to compress with constant 1 as repeat
     
-    if(!compress.empty() && compress.size() < s.size()) // if compress isn't empty and its size is less than s
-        return compress; // compress is shortest
+    if(compress.empty() || compress.size() >= s.size()) // if compress is empty or its size is more than or same as s
+        return s; // s is shortest
     
-    return s; // s is shortest
+    return compress; // compress is shortest
 }
